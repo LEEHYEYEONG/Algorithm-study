@@ -133,7 +133,7 @@ code
 
 ## Week 1
 
-- 총무 : [seungwookim99](https://github.com/seungwooKim99)
+- 총무 : [jonghyeonjo99](https://github.com/jonghyeonjo99)
 
 ### 1. 그리디
 
