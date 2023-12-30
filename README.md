@@ -125,8 +125,8 @@ code
 | [LEEHYEYEONG](https://github.com/LEEHYEYEONG)     |     |     |     |     |     |     |      |      |
 | [obvoso](https://github.com/obvoso)               |     |     |     |     |     |     |      |      |
 | [OhHyukJun](https://github.com/OhHyukJun)         |     |     |     |     |     |     |      |      |
-|                                                   |     |     |     |     |     |     |      |      |
-|                                                   |     |     |     |     |     |     |      |      |
+| [joochaeyeon](https://github.com/joochaeyeon)     |     |     |     |     |     |     |      |      |
+| [wkdrhkdwls](https://github.com/wkdrhkdwls)       |     |     |     |     |     |     |      |      |
 
 # 커리큘럼
 
@@ -136,6 +136,6 @@ code
 
 - 총무 : [jonghyeonjo99](https://github.com/jonghyeonjo99)
 
-### 1. 그리디
+### 1. 그리디 + 실전
 
 
