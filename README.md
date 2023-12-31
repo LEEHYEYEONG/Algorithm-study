@@ -148,7 +148,7 @@ code
 
 ### 2. 실전
 
-- 문제정보 : 메뉴 리뉴얼
+- 문제정보 : 메뉴 리뉴얼 (72411)
 - 출처 : 프로그래머스
 - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/72411
 
