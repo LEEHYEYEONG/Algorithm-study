@@ -136,6 +136,20 @@ code
 
 - 총무 : [jonghyeonjo99](https://github.com/jonghyeonjo99)
 
-### 1. 그리디 + 실전
+### 1. 그리디
+
+- 문제정보 : 수리공 항승 (1449)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/1449
+
+- 문제정보 : 강의실 배정 (11000)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/11000
+
+### 2. 실전
+
+- 문제정보 : 메뉴 리뉴얼
+- 출처 : 프로그래머스
+- 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/72411
 
 
