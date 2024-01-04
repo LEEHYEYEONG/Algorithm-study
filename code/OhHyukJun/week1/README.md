@@ -147,3 +147,36 @@ print(len(count))
     - ['ABCD','BCDE'] 일 때 course가 2,3,5이면 위의 상황에서 추려지지 않음
     - 직접 비교를 통해 ['BCD'] 만 남기고 문자열을 저장
 5. 조건에 맞게 조합을 생성하는 함수와 횟수를 세는 함수를 생성해야함(아마 import할게 있겠지만 일단 구현해보고 찾아볼 예정)
+    - 조합을 생성하는 함수 - ["ABC"] n = 2 -> [A,B],[B,C],[A,C] 이렇게 결과가 나오도록 구성해보겠음 
+    - 횟수를 세는 함수를 생성
+
+### 문제 풀이
+
+1. 조합 생성 함수
+```python
+def combination(arr,n):
+    result = []
+    if len(arr) < n: #orders의 길이가 course보다 작으면 빈 배열 출력
+        return result
+    if n == 1: #course를 다 돌면 최종 결과를 출력
+        return [[i] for i in arr]
+    else:
+        for i in range(len(arr)):
+            rest = arr[i+1:]
+            for j in combination(rest,n-1):
+                result.append([arr[i]]+j)
+        return result
+```
+![Alt text](image.png)
+
+2. 횟수 카운트 함수
+```python
+def count(combos):
+    count = {}
+    for i in combos:
+        if i in count:
+            count[i] += 1
+        else:
+            count[i] = 1
+    return count
+```
