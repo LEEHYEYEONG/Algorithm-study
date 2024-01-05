@@ -170,7 +170,7 @@ def combination(arr,n):
 ![Alt text](image.png)
 
 - 이걸 사용하면 조합 생성 함수를 생성할 필요가 없었다
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/6050fe56-a254-4b6d-b7e1-eb05dd2941a7/418bd143-b63b-4a80-97fb-7d8b5231f7df/Untitled.png)
+![Alt text](image-1.png)
 
 2. 횟수 카운트 함수
 ```python
