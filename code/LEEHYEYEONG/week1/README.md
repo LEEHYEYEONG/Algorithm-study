@@ -67,3 +67,52 @@ for i in range(1, n):
         heapq.heappop(room) # 가장 작은 항목 반환
     heapq.heappush(room, room_list[i][1])
 ```
+
+<br>
+
+# 프로그래머스 메뉴 리뉴얼
+
+## 접근
+
+`itertools` 라이브러리를 알고 있어서 combinations으로 course에 있는 개수만큼 뽑기로 했음
+`from itertools import combinations`
+<br>
+뽑은 후에 문자열로 다시 조합한 후 `combi_list`에 추가
+
+`Counter의 most_common`
+<br> 세는 방법을 직접 구현하려다가 Counter이라는 라이브러리를 찾았고 most_common이라는 함수를 사용
+<br>
+
+### most_common
+
+n개의 가장 흔한 요소와 그 개수를 가장 흔한 것부터 가장 적은 것 순으로 나열한 리스트를 반환. n이 생략되거나 None이면 모든 요소를 반환.
+<br>
+가장 많이 나온것부터 나열한 리스트를 반환하기 때문에 여기에서 max_count를 간편하게 구할 수 있음
+
+```python
+    for i in course:
+        combi_list = list()
+        for j in orders:
+            combi = list(map(lambda x: ''.join(x), combinations(j, i)))
+            combi_list.extend(combi)
+            menu[i] = Counter(combi_list).most_common()
+```
+
+```python
+max_count = menu[i][0][-1]
+```
+
+<br>
+그 후 저장된 menu 딕셔너리에서 1이 아닌 max_count와 같다면 정답 배열에 저장하고 정렬된 배열을 반환한다.
+
+## 문제
+
+테스트케이스 3의 경우 초기에 orders를 문자별로 정렬해놓지 않으면 XW와 WX를 다르게 보고 개수를 셈
+
+```python
+orders = list(map(sorted, orders))
+```
+
+이 부분을 추가
+
+Counter를 사용하는 법을 잘 몰랐는데 이 문제를 통해서 사용법을 익히게 되었다.
