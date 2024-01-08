@@ -166,9 +166,9 @@ code
 - 출처 : 백준
 - 링크 :  https://www.acmicpc.net/problem/14719
 
-  ### 2. 실전
+### 2. 실전
 
-  - 문제정보 : 문자열 압축 (60057)
-  - 출처 : 프로그래머스
-  - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/60057
+ - 문제정보 : 문자열 압축 (60057)
+ - 출처 : 프로그래머스
+ - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/60057
 
