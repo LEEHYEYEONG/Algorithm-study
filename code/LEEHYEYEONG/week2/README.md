@@ -70,3 +70,91 @@ if m == 1:
 #### 참고 블로그
 
 https://www.acmicpc.net/problem/1913
+
+# 백준 14719번
+
+## 접근
+
+w만큼 반복하면서 이전의 가장 높은 높이보다 더 큰 높이가 나온다면 이때까지 temp에 모인 빗물을 volume에 더하고 아니라면 temp에 계속 더해나간다.
+
+그리고 max_height를 갱신해나간다.
+
+```python
+w, h = map(int, input().split())
+map_list = list(map(int, input().split()))
+
+temp = 0
+volume = 0
+max_height = map_list[0]
+
+for i in range(w):
+    if(max_height <= map_list[i]):
+        volume += temp
+        temp = 0
+        max_height = map_list[i]
+    else:
+        temp += (max_height - map_list[i])
+
+print(volume)
+```
+
+이렇게 짜면 문제점이 하나의 웅덩이만 가능하다.
+
+예제1, 3은 원하는 출력이 나오고 예제 2는 원하는 값이 나오지 않는다.
+
+예제 2에서 3만큼 쌓이고 max_height가 현재 4이므로 2를 만났을 때 빗물을 더할 수 없다는게 문제점이다.
+
+그리고 max_list[0]으로 초기에 max_height를 설정해두었는데 이것보다 작지만 전에 빗물보다는 크다면 제대로 구할 수 없다.
+
+그래서 투포인터를 사용해 풀이를 진행했다.
+
+맨왼쪽과 맨오른쪽에 pointer를 두고 중앙으로 이동하고 최대 높이의 막대까지 기둥 최대 높이와 현재 높이와의 차이만큼 volume을 더한다.
+
+```python
+h, w = map(int, input().split())
+map_list = list(map(int, input().split()))
+
+volume = 0
+left, right = 0, w - 1
+max_left, max_right = map_list[left], map_list[right]
+
+while left < right:
+    max_left, max_right = max(map_list[left], max_left), max(map_list[right], max_right)
+
+    if max_left <= max_right:
+        volume += max_left - map_list[left]
+        left += 1
+    else:
+        volume += max_right - map_list[right]
+        right -= 1
+
+print(volume)
+```
+
+w, h를 굳이 안받아도 될것 같다.
+
+이와 비슷한 문제를 이전에 푼 적이 있어서 투포인터 풀이를 떠올랐는데 제대로 구현하지 못해서 이전에 푼 걸 참고했다.
+
+제대로 기억하기 위해서 예제 2를 차근차근 적용해보겠다.
+
+|     | left, right | max_left, max_right | volume                   |           |
+| --- | ----------- | ------------------- | ------------------------ | --------- |
+| 1   | 3, 2        | 3, 2                | volume = 0 + (2 - 2) = 0 | right = 1 |
+| 2   | 3, 1        | 3, 2                | volume = 0 + (2 - 1) = 1 | right = 1 |
+| 3   | 3, 1        | 3, 2                | volume = 1 + (2 - 1) = 2 | right = 4 |
+| 4   | 3, 4        | 3, 4                | volume = 2 + (3 - 3) = 2 | left = 1  |
+| 5   | 1, 4        | 3, 4                | volume = 2 + (3 - 1) = 4 | left = 2  |
+| 6   | 2, 4        | 3, 4                | volume = 4 + (3 - 2) = 5 | left = 3  |
+| 7   | 3, 4        | 3, 4                | volume = 5 + (3 - 3) = 5 | left = 4  |
+
+<br>
+
+## 참고
+
+### 투포인터
+
+https://learning-e.tistory.com/37
+
+### 풀이
+
+https://velog.io/@kynel/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B9%97%EB%AC%BC-%ED%8A%B8%EB%9E%98%ED%95%91
