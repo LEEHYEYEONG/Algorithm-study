@@ -158,3 +158,93 @@ https://learning-e.tistory.com/37
 ### 풀이
 
 https://velog.io/@kynel/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B9%97%EB%AC%BC-%ED%8A%B8%EB%9E%98%ED%95%91
+
+<br>
+
+# 프로그래머스 문자열 압축
+
+## 접근
+
+일단 하나씩 자르는 경우를 구현해보았다.
+
+```python
+def solution(s):
+    #s = list(s)
+    stack = []
+    char = ''
+    for i in s:
+        if(stack and stack[-1] != i):
+            char += stack[-1] if stack.count(stack[-1]) == 1 else (str(stack.count(stack[-1])) + stack[-1])
+            stack.clear()
+        stack.append(i)
+
+    char += stack[-1] if stack.count(stack[-1]) == 1 else (str(stack.count(stack[-1])) + stack[-1])
+    print(char)
+
+    return len(char)
+
+print(solution("aabbaccc"))
+```
+
+하나씩 자르는 경우 전의 꺼만 비교하면 되어서 stack[-1]을 비교해서 다르다면 char에 count를 넣고 stack을 비운다.
+
+문자열이 여러개 인 경우 어떻게 압축할까?
+
+만약 2개인 경우 슬라이싱에서 [0:2] → [2:4] 이런식으로 비교해나가면서 할 수 있지 않을까해서 원래 쓴 코드에 적용해서 작성해보았다.
+
+```python
+for i in range(1, len(s)//2 + 1):
+    for j in range(0, len(s), i):
+				string.append(s[j:j+i])
+```
+
+이런 식으로 하면 차례대로 문자열을 나누어서 저장할 수 있다.
+
+이전의 풀이를 이 슬라이싱한 문자열로 대체해서 비교하였다.
+
+자르는 문자열의 크기는 s의 절반을 넘을 수 없으니 `len(s) // 2 + 1` 로 반복되는 횟수를 지정했다.
+
+1을 생략하기 위한 로직 부분은 따로 함수로 구현하였다.
+
+```python
+def count_stack(stack):
+    if(stack.count(stack[-1]) == 1):
+        char = stack[-1]
+    else:
+        char = (str(stack.count(stack[-1])) + stack[-1])
+    stack.clear()
+
+    return char
+```
+
+```python
+for i in range(1, len(s)//2 + 1):
+        for j in range(0, len(s), i):
+            if(string and string[-1] != s[j:j+i]):
+                char+= count_stack(string)
+            string.append(s[j:j+i])
+
+        char+= count_stack(string)
+        answer.append(len(char))
+        char = ''
+```
+
+만약에 이전에 문자열과 다르면 count_stack 함수를 이용해서 char에 더한다. 이렇게 하면 마지막 string에 담긴 것을 추가할 수 없어서
+
+`char+= count_stack(string)` j 반복문이 돈 후 해주었다.
+
+answer에 char의 길이를 추가해준 후 char를 초기화했다.
+
+_`return_ min(answer)` 그리고 answer 중 가장 작은 수를 리턴한다.
+<br>
+
+## 문제
+
+테스트 케이스 중 5번이 런타임에러가 났는데 s가 1일 경우 for문을 돌지 않고 answer이 비어있기에 에러가 난다.
+
+그래서 아래 코드를 추가해주었다.
+
+```python
+if(len(s) == 1):
+		return 1
+```
