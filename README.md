@@ -119,14 +119,14 @@ code
 
 | 멤버                                              | 1주차 | 2주차 | 3주차 | 4주차 | 5주차 | 6주차 | 7주차 | 8주차 |
 | ------------------------------------------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| [jonghyeonjo99](https://github.com/jonghyeonjo99) |  ✅  |     |     |     |     |     |      |      |
-| [HoChanny](https://github.com/HoChanny)           |  ✅  |     |     |     |     |     |      |      |
-| [jjuny-won](https://github.com/jjuny-won)         |  ✅  |     |     |     |     |     |      |      |
-| [LEEHYEYEONG](https://github.com/LEEHYEYEONG)     |  ✅  |     |     |     |     |     |      |      |
-| [obvoso](https://github.com/obvoso)               |  ✅  |     |     |     |     |     |      |      |
-| [OhHyukJun](https://github.com/OhHyukJun)         |  ✅  |     |     |     |     |     |      |      |
-| [joochaeyeon](https://github.com/joochaeyeon)     |  ✅  |     |     |     |     |     |      |      |
-| [wkdrhkdwls](https://github.com/wkdrhkdwls)       |  😥  |     |     |     |     |     |      |      |
+| [jonghyeonjo99](https://github.com/jonghyeonjo99) |  ✅  |  😥  |     |     |     |     |      |      |
+| [HoChanny](https://github.com/HoChanny)           |  ✅  |  ✅  |     |     |     |     |      |      |
+| [jjuny-won](https://github.com/jjuny-won)         |  ✅  |  ✅  |     |     |     |     |      |      |
+| [LEEHYEYEONG](https://github.com/LEEHYEYEONG)     |  ✅  |  ✅  |     |     |     |     |      |      |
+| [obvoso](https://github.com/obvoso)               |  ✅  |  ✅  |     |     |     |     |      |      |
+| [OhHyukJun](https://github.com/OhHyukJun)         |  ✅  |  ✅  |     |     |     |     |      |      |
+| [joochaeyeon](https://github.com/joochaeyeon)     |  ✅  |  ✅  |     |     |     |     |      |      |
+| [wkdrhkdwls](https://github.com/wkdrhkdwls)       |  😥  |  😥  |     |     |     |     |      |      |
 
 # 커리큘럼
 
