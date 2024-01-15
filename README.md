@@ -172,3 +172,22 @@ code
  - 출처 : 프로그래머스
  - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/60057
 
+## Week 3
+
+-총무 : [LEEHYEYEONG](https://github.com/leehyeyeong)
+
+### 1. DFS/BFS
+
+- 문제정보 : DFS와 BFS (1260)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/1260
+
+- 문제정보 : 숨바꼭질2 (12851)
+- 출처 : 백준
+- 링크 :  https://www.acmicpc.net/problem/12851
+
+### 2. 실전
+
+ - 문제정보 : 거리두기 확인하기 (81302)
+ - 출처 : 프로그래머스
+ - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/81302
