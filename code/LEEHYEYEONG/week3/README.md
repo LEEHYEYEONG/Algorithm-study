@@ -142,3 +142,175 @@ dfs, bfs를 다른 문제에 적용할 수 있도록 익혀야겠다.
 [DFS 완벽 구현하기 [Python]](https://data-marketing-bk.tistory.com/entry/DFS-완벽-구현하기-파이썬)
 
 [BFS 완벽 구현하기 - 파이썬](https://data-marketing-bk.tistory.com/entry/BFS-완벽-구현하기-파이썬)
+
+<br>
+
+# 백준 12851번
+
+## 접근
+
+일단 예제 1이 어떻게 나오게 되었는지 한번 보면
+
+| 시간 / 방법 | 1번         | 2번         |
+| ----------- | ----------- | ----------- |
+| 1초         | 4(5 → 4)    | 10(5\*2)    |
+| 2초         | 8(4\*2)     | 9(10 → 9)   |
+| 3초         | 16(8\*2)    | 18(9\*2)    |
+| 4초         | 17(16 → 17) | 17(18 → 17) |
+
+이렇게 두 가지 경우가 가장 빠른 4초로 찾을 수 있는 방법이다.
+
+그래서 4, 2가 출력된다.
+
+이렇게 n에서 이어진 정점을 통해 k까지 가는 방법들을 구한 후 가장 빠른 방법을 구하고 그것의 개수를 구하는 방식으로 구하면 되지 않을까 생각했다.
+
+현재 5에서 갈수 있는 곳은 (3, 4, 10) 여기에서 선택하여 17까지 가는 방법들을 구하는 것이다.
+
+노드 사이의 최단 경로를 구해야 하기에 BFS를 사용하기로 했다.
+
+이전에 구현한 BFS에 적용하여 한번 풀어보겠다.
+
+```python
+def bfs(graph, start_node):
+    need_visited, visited = [], []
+    need_visited.append(start_node)
+
+    while need_visited:
+        node = need_visited[0]
+        del need_visited[0]
+
+        if node not in visited:
+            visited.append(node)
+            need_visited.extend(graph[node])
+    return visited
+```
+
+어떤 노드를 방문하냐에 따라서 그 다음 노드가 정해지기 때문에 방문할 수 있는 모든 정점들을 만들어서 넣기에는 힘들 것 같아서 돌면서 계속 갱신해주어야 할 것 같다.
+
+내가 생각한 방식은
+
+처음 출발 지점에서 갈수 있는 방법 탐색 →간 곳에서 갈 수 있는 방법 탐색 → 만약 k가 되면 visited의 길이를 배열에 저장, 가장 작은 수, 개수 반환
+
+이렇게 생각했는데 어떻게 구현해야할 지 고민이다.
+
+```python
+from collections import defaultdict
+
+n, k = map(int, input().split())
+answer = []
+
+# 그래프 구현
+graph = defaultdict(list)
+
+def bfs(graph, start_node):
+    need_visited, visited = [], []
+    need_visited.append(start_node)
+    count = 0
+
+    while need_visited:
+        node = need_visited[0]
+        del need_visited[0]
+
+        graph[node].extend([node - 1, node + 1, node * 2])
+        count += 1
+
+        if node not in visited:
+            visited.append(node)
+            need_visited.extend(graph[node])
+
+        if k in graph[node]:
+            return len(visited) - count // 2
+
+print(bfs(graph, n))
+```
+
+이런 식으로 작성하면 몇초만에 빨리 갈 수 있는지는 구할 수가 있다.
+
+count // 2를 한 이유는 만약 5 → 11을 구한다고 하면 visited에 [5, 4, 6, 10] 이렇게 상관없는 4, 6도 저장되기에 이렇게 작성했다.
+
+그런데 개수는 어떻게 구하지,,?
+
+결국 다른 사람의 코드를 참고해서 했는데 시간초과가 난다.
+
+```python
+n, k = map(int, input().split())
+dist = [0] * 100001
+
+need_visited = []
+need_visited.append(n)
+
+way, count_way = 0, 0
+
+while need_visited:
+    node = need_visited[0]
+    del need_visited[0]
+
+    if node == k:
+        way = dist[node]
+        count_way += 1
+        continue
+
+    for i in (node - 1, node + 1, node * 2):
+        if 0 <= i <= 100000 and (dist[i] == 0 or dist[i] == dist[node] + 1):
+            dist[i] = dist[node] + 1
+            need_visited.append(i)
+
+print(way)
+print(count_way)
+```
+
+그래서 리스트 대신 deque()를 이용해보았다.
+
+```python
+from collections import deque
+
+n, k = map(int, input().split())
+dist = [0] * 100001
+
+need_visited = deque()
+need_visited.append(n)
+
+way, count_way = 0, 0
+
+while need_visited:
+    node = need_visited.popleft()
+
+    if node == k:
+        way = dist[node]
+        count_way += 1
+        continue
+
+    for i in (node - 1, node + 1, node * 2):
+        if 0 <= i <= 100000 and (dist[i] == 0 or dist[i] == dist[node] + 1):
+            dist[i] = dist[node] + 1
+            need_visited.append(i)
+
+print(way)
+print(count_way)
+```
+
+dist는 최대 크기의 배열을 만들어 걸리는 횟수를 기록한다.
+
+어떻게 node - 1, node + 1, node \* 2를 방문하면서 할지 고민했는데
+
+`for i in (node - 1, node + 1, node * 2):` 이런 방식으로 반복문을 짜면 되겠구나
+
+그 다음 이 조건문은
+
+`if 0 <= i <= 100000 and (dist[i] == 0 or dist[i] == dist[node] + 1):`
+
+범위 내의 지점이고, 방문하지 않았거나 동일하게 탐색횟수를 가졌다면 탐색하기 위한 조건문이다.
+
+`dist[i] = dist[node] + 1` 방문하고 횟수를 1 늘린다.
+
+너무 어렵따,,,,
+
+## 참고
+
+풀이
+
+[[탐색/BFS] 백준 12851 숨바꼭질 2 - 파이썬(Python)](https://star7sss.tistory.com/540)
+
+deque()
+
+[[파이썬] deque](https://velog.io/@nayoon-kim/파이썬-deque)
