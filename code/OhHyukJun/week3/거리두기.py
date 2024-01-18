@@ -21,17 +21,6 @@ def dfs(place,x,y,visited,distance):
     visited[x][y] = False
     return True
 
-    for dx,dy in directions:
-        nx = x + dx
-        ny = y + dy
-        if 0 <= nx < 5 and 0 <= ny < 5:
-            if visited[nx][ny] == False:
-                if place[x][y] != 'X':
-                    if dfs(place, nx, ny, visited, distance + 1) == False:
-                        return False
-    visited[x][y] = False
-    return True
-
 def solution(places):
     answer = []
     for place in places:
