@@ -98,3 +98,50 @@ for num in number:
 중복제거
 
 [[python] 파이썬 리스트 중복 제거 방법 3가지](https://blockdmask.tistory.com/543)
+
+<br>
+
+# 프로그래머스 파일명 정렬
+
+## 접근
+
+일단은 HEAD와 NUMBER, TAIL을 나누는 작업을 먼저 해야겠다고 생각했다.
+
+```python
+def solution(files):
+    sort_file = []
+    for i in range(len(files)):
+        # ., -, 공백을 기준으로 나누기
+        temp = files[i].replace(" ", "").replace(".", "").replace("-", "")
+        head_str = ""
+        number_str = ""
+        digit = False
+        for j in temp:
+            if j.isdigit():
+                number_str += j
+                digit = True
+            elif digit:
+                break
+            else:
+                head_str += j
+
+        sort_file.append([head_str.lower(), int(number_str), i, files[i]])
+
+    sort_file.sort(key= lambda x:(x[0], x[1], x[2]))
+    answer = [i[3] for i in sort_file]
+    return answer
+```
+
+일단 replace를 이용해서 ., -, 공백을 치환하고 그 문자열을 head, number로 나누었다.
+
+그 후 sort_file 배열에 원래의 파일명을 포함해서 저장하고 이들 기준으로 정렬되도록 lambda 식을 이용해 정렬해주었다.
+
+이 코드의 경우 테스트 케이스를 몇개를 통과하지 못했는데 예제의 F-15를 보면 head는 F가 아니라 `F-` 이다. 공백, -, .이 중요한 것이 아니라 숫자가 나오냐 마냐에 따라 head가 결정되는 것이었다.
+
+왜 replace를 이용했지?
+
+## 참고
+
+치환
+
+[Python translate() : 한 번에 여러 문자 치환하기](https://velog.io/@keywookim/Python-translate-한-번에-여러-문자-치환하기)
