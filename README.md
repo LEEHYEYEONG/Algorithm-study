@@ -119,14 +119,14 @@ code
 
 | 멤버                                              | 1주차 | 2주차 | 3주차 | 4주차 | 5주차 | 6주차 | 7주차 | 8주차 |
 | ------------------------------------------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| [jonghyeonjo99](https://github.com/jonghyeonjo99) |  ✅  |  😥  |     |     |     |     |      |      |
-| [HoChanny](https://github.com/HoChanny)           |  ✅  |  ✅  |     |     |     |     |      |      |
-| [jjuny-won](https://github.com/jjuny-won)         |  ✅  |  ✅  |     |     |     |     |      |      |
-| [LEEHYEYEONG](https://github.com/LEEHYEYEONG)     |  ✅  |  ✅  |     |     |     |     |      |      |
-| [obvoso](https://github.com/obvoso)               |  ✅  |  ✅  |     |     |     |     |      |      |
-| [OhHyukJun](https://github.com/OhHyukJun)         |  ✅  |  ✅  |     |     |     |     |      |      |
-| [joochaeyeon](https://github.com/joochaeyeon)     |  ✅  |  ✅  |     |     |     |     |      |      |
-| [wkdrhkdwls](https://github.com/wkdrhkdwls)       |  😥  |  😥  |     |     |     |     |      |      |
+| [jonghyeonjo99](https://github.com/jonghyeonjo99) |  ✅  |  😥  |  ✅  |     |     |     |      |      |
+| [HoChanny](https://github.com/HoChanny)           |  ✅  |  ✅  |  ✅  |     |     |     |      |      |
+| [jjuny-won](https://github.com/jjuny-won)         |  ✅  |  ✅  |  ✅  |     |     |     |      |      |
+| [LEEHYEYEONG](https://github.com/LEEHYEYEONG)     |  ✅  |  ✅  |  ✅  |     |     |     |      |      |
+| [obvoso](https://github.com/obvoso)               |  ✅  |  ✅  |  😥  |     |     |     |      |      |
+| [OhHyukJun](https://github.com/OhHyukJun)         |  ✅  |  ✅  |  ✅  |     |     |     |      |      |
+| [joochaeyeon](https://github.com/joochaeyeon)     |  ✅  |  ✅  |  ✅  |     |     |     |      |      |
+| [wkdrhkdwls](https://github.com/wkdrhkdwls)       |  😥  |  😥  |  😥  |     |     |     |      |      |
 
 # 커리큘럼
 
@@ -191,3 +191,22 @@ code
  - 문제정보 : 거리두기 확인하기 (81302)
  - 출처 : 프로그래머스
  - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/81302
+
+## Week 4
+- 총무 : [OhHyukJun](https://github.com/OhHyukJun)
+
+### 1. 정렬
+
+- 문제정보 : 나이순 정렬 (10814)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/10814
+
+- 문제정보 : 좌표압축 (18870)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/18870
+
+### 2. 실전
+
+ - 문제정보 : 파일명 정렬 (17686)
+ - 출처 : 프로그래머스
+ - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/17686
