@@ -222,7 +222,7 @@ code
 
 - 문제정보 : 공유기 설치 (2110)
 - 출처 : 백준
-- 링크 : https://www.acmicpc.net/problem/2512
+- 링크 : https://www.acmicpc.net/problem/2110
 
 ### 2. 실전
 
