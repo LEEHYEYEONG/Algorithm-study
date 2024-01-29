@@ -337,3 +337,32 @@ dy = [0, 1, 0, -1, -1, 1, -1, 1]
 `["PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"]` 이 경우를 제대로 작동하지 않아서 맨해튼 거리가 2인 경우 X가 있는지 확인하는 코드가 제대로 작동이 안되는 것 같다.
 
 다시 수정해서 코드를 반영하려고 한다,,,ㅎㅎ
+
+---
+
+찬호님이 짠 코드에서 생각해낸 아이디가 좋아서 코드에 반영해보았다.
+
+만약 현재 문자가 O인 경우 상하좌우 중 2개 이상의 P가 있다면 맨해튼 거리가 지켜지지 않은 것이다.
+
+이 아이디어를 생각하면 굳이 대각선도 따지지 않아도 되었다.
+
+```python
+    for i in range(5):
+        for j in range(5):
+            if place[i][j] == 'P':
+                for w in range(4):
+                    nx, ny = i+dx[w], j+dy[w]
+                    if 0 <= nx < 5 and 0 <= ny < 5 and place[nx][ny] == 'P':
+                        return 0
+            elif place[i][j] == 'O':
+                count = 0
+                for w in range(4):
+                    nx, ny = i+dx[w], j+dy[w]
+                    if 0 <= nx < 5 and 0 <= ny < 5 and place[nx][ny] == 'P':
+                        count += 1
+
+                if count >= 2:
+                    return 0
+    return 1
+
+```
