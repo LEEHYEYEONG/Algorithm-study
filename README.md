@@ -210,3 +210,22 @@ code
  - 문제정보 : 파일명 정렬 (17686)
  - 출처 : 프로그래머스
  - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/17686
+
+## Week 5
+- 총무 : [obvoso](https://github.com/obvoso)
+
+### 1. 이진탐색
+
+- 문제정보 : 예산 (2512)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/2512
+
+- 문제정보 : 공유기 설치 (2110)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/19623
+
+### 2. 실전
+
+ - 문제정보 : 입국 심사 (43238)
+ - 출처 : 프로그래머스
+ - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/17686
