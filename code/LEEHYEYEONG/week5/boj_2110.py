@@ -1,5 +1,7 @@
 n, c = map(int, input().split())
-house = sorted([int(input()) for _ in range(n)])
+house = [int(input()) for _ in range(n)]
+
+house.sort()
 
 # 공유기 최소 거리 
 start = 1
@@ -27,5 +29,3 @@ while (start <= end):
         end = mid - 1
 
 print(answer)
-
-    
