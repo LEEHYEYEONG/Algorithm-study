@@ -47,18 +47,50 @@ M이 10억이하의 숫자이기 때문에 완전탐색을 하게되면 무조�
 문제의 입력조건을 보고 무조건 이분탐색임을 확인할 수 있었다.
 이분탐색의 대상이 어떤 값인지를 잘 선정하는 능력을 기르자!
 
-# 1234 : ABCD
-## 😎solved code
-## 🥺unsolved code
+# 2110 : 공유기 설치
 ### 💻code
 ```python
+import sys
 
+
+n,c = map(int,sys.stdin.readline().rstrip().split())
+houses = []
+for i in range(n):
+  house = int(sys.stdin.readline().rstrip())
+  houses.append(house)
+
+houses.sort()
+
+left = 0
+right = houses[-1] - houses[0]
+mid = 0
+result = 0
+while(left <= right):
+  mid = (left + right) // 2
+  current = houses[0]
+  count = 1
+  for i in range(1, len(houses)):
+    if (houses[i] >= current + mid):
+      count += 1
+      current = houses[i]
+
+  if(count >= c):
+    left = mid + 1
+    result = mid
+  else:
+    right = mid - 1
+
+print(mid) 
   ```
 ## ❗️결과
-
+실패 후 풀이 참조
 ## 💡접근
+1. 집들의 좌표를 정렬
+2. 집들 사이 거리를 이분탐색의 대상으로 두고, 두번째 집부터 마지막 집까지 앞의 집과의 거리가 mid보다 멀다면 공유기를 설치한다.
+3. 이후 설치된 공유기의 개수가 c보다 크다면 설치 거리를 증가시키고, c보다 작다면 설치거리를 감소시킨다.
 
 ## 🧐문제 회고
+이분탐색의 대상을 설치거리로 선정하였지만, 이분탐색과정의 기준을 설치가능한 공유기의 개수로 생각하지 못하였다.
 
 # 43238 : 입국심사
 ## 🥺unsolved code
