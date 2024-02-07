@@ -229,3 +229,22 @@ code
  - 문제정보 : 입국 심사 (43238)
  - 출처 : 프로그래머스 
  - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/43238
+ - 
+ ## week 6
+ -총무 [HoChanny](https://github.com/HoChanny)
+
+ ### 1. DP
+
+ - 문제정보 : 평범한 배낭 (12865)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/12865
+
+- 문제정보 : 합분해 (2225)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/2225
+
+### 2. 실전
+
+ - 문제정보 : N으로 표현 (42895)
+ - 출처 : 프로그래머스 
+ - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/42895
