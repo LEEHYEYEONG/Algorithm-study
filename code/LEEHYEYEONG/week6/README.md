@@ -1,3 +1,7 @@
+# 백준 12865번
+
+## 접근
+
 이런 문제는 냅색 알고리즘으로 풀 수 있다고 한다.
 
 ### 냅색 알고리즘
@@ -61,3 +65,52 @@ print(dp[n][k])
 ## 참고
 
 [[Python] 냅색 알고리즘(Knapsack Problem) - Dynamic Programming(DP)](https://inni-iii.tistory.com/74)
+
+<br>
+
+# 백준 2225번
+
+## 접근
+
+입력받기
+
+```python
+import sys
+n, k = map(int, sys.stdin.readline().split())
+
+dp = [[0 for _ in range(k+1)] for _ in range(n+1)]
+```
+
+예제에서 20 2 → [0 + 20을 1개로 나눈 것] + [1 + 19을 1개로 나눈 것] + … + [19 + 1을 1개로 나눈 것] + [20 + 0을 1개로 나눈 것]
+
+0~20 → 21
+
+이렇게 나타낼 수 있으므로
+
+`dp[n][k] = dp[0][k-1] + dp[1][k-1] + … + dp[n][k-1]`
+
+`dp[n-1][k] = dp[0][k-1] + dp[1][k-1] + … + dp[n-1][k-1]`
+
+따라서 `dp[n][k] = dp[n-1][k] + dp[n][k-1]` 이렇게 된다.
+
+dp[0][0]은 0 하나이기 때문에 1
+
+```python
+dp[0][0] = 1
+
+for i in range(0, n+1):
+    for j in range(1, k+1):
+        dp[i][j] = dp[i-1][j] + dp[i][j-1]
+
+print(dp[n][k] % 1000000000)
+```
+
+피보나치처럼 점화식을 이용해서 간단히 풀 수 있는 문제였다.
+
+0 + 20, 1+19… 이런 식으로 하는 방식은 생각해보았는데 어떻게 표현해야할지 고민하면서 참고했다.
+
+잘모르면 하나씩 써보면서 코드를 작성해가면 될 것 같다.
+
+## 참고
+
+[[Python] 백준 2225번: 합분해 풀이](https://jyeonnyang2.tistory.com/54)
