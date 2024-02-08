@@ -4,7 +4,6 @@ for _ in range(N):
     W, V = map(int,input().split())
     arr.append((W,V))
 
-arr.sort()
 dp = [0 for _ in range(K+1)]
 
 for W, V in arr:
