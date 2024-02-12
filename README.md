@@ -119,14 +119,14 @@ code
 
 | 멤버                                              | 1주차 | 2주차 | 3주차 | 4주차 | 5주차 | 6주차 | 7주차 | 8주차 |
 | ------------------------------------------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| [jonghyeonjo99](https://github.com/jonghyeonjo99) |  ✅  |  😥  |  ✅  |  ✅  |  ✅  |     |      |      |
-| [HoChanny](https://github.com/HoChanny)           |  ✅  |  ✅  |  ✅  |  ✅  |  😥  |     |      |      |
-| [jjuny-won](https://github.com/jjuny-won)         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |     |      |      |
-| [LEEHYEYEONG](https://github.com/LEEHYEYEONG)     |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |     |      |      |
-| [obvoso](https://github.com/obvoso)               |  ✅  |  ✅  |  😥  |  😥  |  ✅  |     |      |      |
-| [OhHyukJun](https://github.com/OhHyukJun)         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |     |      |      |
-| [joochaeyeon](https://github.com/joochaeyeon)     |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |     |      |      |
-| [wkdrhkdwls](https://github.com/wkdrhkdwls)       |  ✅  |  😥  |  😥  |  😥  |  😥  |     |      |      |
+| [jonghyeonjo99](https://github.com/jonghyeonjo99) |  ✅  |  😥  |  ✅  |  ✅  |  ✅  |  😥  |      |      |
+| [HoChanny](https://github.com/HoChanny)           |  ✅  |  ✅  |  ✅  |  ✅  |  😥  |  ✅  |      |      |
+| [jjuny-won](https://github.com/jjuny-won)         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |      |
+| [LEEHYEYEONG](https://github.com/LEEHYEYEONG)     |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |      |
+| [obvoso](https://github.com/obvoso)               |  ✅  |  ✅  |  😥  |  😥  |  ✅  |  😥  |      |      |
+| [OhHyukJun](https://github.com/OhHyukJun)         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |      |
+| [joochaeyeon](https://github.com/joochaeyeon)     |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |      |
+| [wkdrhkdwls](https://github.com/wkdrhkdwls)       |  ✅  |  😥  |  😥  |  😥  |  😥  |  😥  |      |      |
 
 # 커리큘럼
 
@@ -248,3 +248,21 @@ code
  - 문제정보 : N으로 표현 (42895)
  - 출처 : 프로그래머스 
  - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/42895
+
+## Week 7
+- 총무 : [joochaeyeon](https://github.com/joochaeyeon)
+
+### 1. 최단경로
+- 문제정보 : 최단경로 (1753)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/1753
+
+- 문제정보 : 타임머신 (11657)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/11657
+
+### 2. 실전
+
+ - 문제정보 : 배달 (12978)
+ - 출처 : 프로그래머스 
+ - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12978
