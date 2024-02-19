@@ -119,14 +119,14 @@ code
 
 | 멤버                                              | 1주차 | 2주차 | 3주차 | 4주차 | 5주차 | 6주차 | 7주차 | 8주차 |
 | ------------------------------------------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| [jonghyeonjo99](https://github.com/jonghyeonjo99) |  ✅  |  😥  |  ✅  |  ✅  |  ✅  |  😥  |      |      |
-| [HoChanny](https://github.com/HoChanny)           |  ✅  |  ✅  |  ✅  |  ✅  |  😥  |  ✅  |      |      |
-| [jjuny-won](https://github.com/jjuny-won)         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |      |
-| [LEEHYEYEONG](https://github.com/LEEHYEYEONG)     |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |      |
-| [obvoso](https://github.com/obvoso)               |  ✅  |  ✅  |  😥  |  😥  |  ✅  |  😥  |      |      |
-| [OhHyukJun](https://github.com/OhHyukJun)         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |      |
-| [joochaeyeon](https://github.com/joochaeyeon)     |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |      |
-| [wkdrhkdwls](https://github.com/wkdrhkdwls)       |  ✅  |  😥  |  😥  |  😥  |  😥  |  😥  |      |      |
+| [jonghyeonjo99](https://github.com/jonghyeonjo99) |  ✅  |  😥  |  ✅  |  ✅  |  ✅  |  😥  |  ✅  |      |
+| [HoChanny](https://github.com/HoChanny)           |  ✅  |  ✅  |  ✅  |  ✅  |  😥  |  ✅  |  😥  |      |
+| [jjuny-won](https://github.com/jjuny-won)         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| [LEEHYEYEONG](https://github.com/LEEHYEYEONG)     |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  😥  |      |
+| [obvoso](https://github.com/obvoso)               |  ✅  |  ✅  |  😥  |  😥  |  ✅  |  😥  |  😥  |      |
+| [OhHyukJun](https://github.com/OhHyukJun)         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  😥  |      |
+| [joochaeyeon](https://github.com/joochaeyeon)     |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| [wkdrhkdwls](https://github.com/wkdrhkdwls)       |  ✅  |  😥  |  😥  |  😥  |  😥  |  😥  |  😥  |      |
 
 # 커리큘럼
 
@@ -266,3 +266,20 @@ code
  - 문제정보 : 배달 (12978)
  - 출처 : 프로그래머스 
  - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12978
+
+## Week8
+- 총무 : [jjuny-won](https://github.com/jjuny-won)
+
+### 1. 그래프
+- 문제정보 : 도시 분할 계획 (1647)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/1753
+
+- - 문제정보 : 장난감 조립 (2637)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/1753
+
+### 2. 실전
+ - 문제정보 : 도넛과 막대 그래프 (258711)
+ - 출처 : 프로그래머스 
+ - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/258711
