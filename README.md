@@ -273,11 +273,11 @@ code
 ### 1. 그래프
 - 문제정보 : 도시 분할 계획 (1647)
 - 출처 : 백준
-- 링크 : https://www.acmicpc.net/problem/1753
+- 링크 : https://www.acmicpc.net/problem/1647
 
 - - 문제정보 : 장난감 조립 (2637)
 - 출처 : 백준
-- 링크 : https://www.acmicpc.net/problem/1753
+- 링크 : https://www.acmicpc.net/problem/2637
 
 ### 2. 실전
  - 문제정보 : 도넛과 막대 그래프 (258711)
